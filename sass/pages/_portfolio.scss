@@ -1,0 +1,205 @@
+.portfolio {
+
+    &__title-box {
+        width: 26rem;
+        height: 26rem;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+        line-height: 1.4;
+    }
+
+    &__gallery {
+        font-weight: 300;
+        font-size: 1.8rem;
+        letter-spacing: 2.5px;
+    }
+
+    &__img {
+        width: 26rem;
+        height: 26rem;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--1 {
+            background-image: url(/img/photo.jpg);
+            background-size: 180%;
+            background-position: 22% 15%;
+        }
+
+        &--2 {
+            background-image: url(/img/photo1.jpg);
+            background-position: center 25%;
+        }
+
+        &--3 {
+            background-image: url(/img/photo2.jpg);
+            background-size: 150%;
+            background-position: 50% -10%;
+        }
+
+        &--4 {
+            background-image: url(/img/photo3.jpg);
+            background-position: center;
+        }
+
+        &--5 {
+            background-image: url(/img/photo4.jpg);
+            background-size: 155%;
+            background-position: 10% 10%;
+        }
+
+        &--6 {
+            background-image: url(/img/photo5.jpg);
+        }
+
+        &--7 {
+            background-image: url(/img/photo6.jpg);
+            background-size: 230%;
+            background-position: 65% 10%;
+        }
+
+        &--8 {
+            background-image: url(/img/photo7.jpg);
+            background-size: 120%;
+            background-position: 95% top;
+        }
+
+        &--9 {
+            background-image: url(/img/photo8.jpg);
+            background-size: 160%;
+            background-position: 40% 20%;
+        }
+
+        &--10 {
+            background-image: url(/img/photo9.jpg);
+            background-position: 0% 29%;
+        }
+
+        &--11 {
+            background-image: url(/img/photo10.jpg);
+            background-size: 220%;
+            background-position: top center;
+        }
+
+        &--12 {
+            background-image: url(/img/photo11.jpg);
+            background-size: 120%;
+            background-position: 65% top;
+        }
+
+        &--13 {
+            background-image: url(/img/photo12.jpg);
+            background-position: 40% center;
+        }
+
+        &--14 {
+            background-image: url(/img/photo13.jpg);
+            background-size: 220%;
+            background-position: 25% top;
+        }
+
+        &--15 {
+            background-image: url(/img/photo14.jpg);
+            background-position: 90% 50%;
+        }
+
+        &:hover {
+            .portfolio__img-hover {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__img-hover {
+        width: 80%;
+        height: 80%;
+        background-color: rgba(255, 255, 255, .7);
+        cursor: pointer;
+        transition: all .5s;
+        visibility: hidden;
+        opacity: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    @include go-to-top;
+
+    /* SINGLE VIEW POPUP */
+
+    &__single-view {
+        background-color: #fff;
+        width: 45vw;
+        height: 40vw;
+        position: fixed;
+        top: 8%;
+        left: 27.5%;
+        z-index: -1;
+        transition: visibility .3s, opacity .3s;
+
+        visibility: hidden;
+        opacity: 0;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__dark-overlay {
+            background-color: rgba(0, 0, 0, .5);
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: visibility .3s, opacity .3s;
+
+            visibility: hidden;
+            opacity: 0;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        &__single-view:target {
+            z-index: 5050;
+        }
+
+        &__single-view:target + &__dark-overlay {
+            z-index: 5001;
+        }
+
+        &__single-view:target, &__single-view:target + &__dark-overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        &__reset {
+            visibility: hidden;
+            &:target ~ &__dark-overlay,
+            &:target ~ &__single-view {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+}

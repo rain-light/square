@@ -1,0 +1,125 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(55.5rem, 1fr));
+    grid-row-gap: 4rem;
+    justify-items: center;
+
+    @media only screen and (max-width: 27.8125em) {
+        grid-template-columns: 100%;
+        padding: 0 2rem;
+    }
+
+    &__image {
+        background-image: url(/img/about.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 55.5rem;
+        height: 55rem;
+
+        @media only screen and (max-width: 27.8125em) {
+            width: 100%;
+            height: 90vw;
+        }
+    }
+
+    &__text {
+        align-self: center;
+        padding: 0 4rem;
+
+        @media only screen and (max-width: 27.5em) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        margin-left: 5px;
+    }
+
+    &__paragraphs {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    &__paragraph {
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__clients {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        @media only screen and (max-width: 27.5em) {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0;
+
+            .timeline__column {
+                width: 28%;
+            }
+        }
+    }
+
+    &__clients-title {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: .6rem;
+    }
+
+    &__clients-list {
+        list-style: none;
+    }
+
+    &__clients-element {
+        line-height: 1;
+    }
+
+    &__clients-link {
+        text-decoration: none;
+        color: $color-gray;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    &__testimonial {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__testimonial-group {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__testimonial-icon {
+        width: 3rem;
+        height: 3rem;
+        fill: $color-gray;
+    }
+
+    &__testimonial-text {
+        margin-top: 1.5rem;
+        text-align: center;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 1.8rem;
+        letter-spacing: 1.2px;
+    }
+
+    &__testimonial-name {
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+}

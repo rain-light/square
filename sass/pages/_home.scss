@@ -1,0 +1,15 @@
+.home {
+
+    &__portfolioview {
+        width: 100%;
+        height: 102.5rem;
+
+        @media only screen and (max-width: 67.62em) {
+            height: 85vw;
+        }
+    }
+
+    &__content {
+        margin-top: 6rem;
+    }
+}

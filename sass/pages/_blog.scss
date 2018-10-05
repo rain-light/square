@@ -1,0 +1,38 @@
+.blog {
+
+    &__section {
+        margin-top: 1rem;
+    }
+
+    &__navigation {
+        width: 45rem;
+        margin: 0 auto;
+        margin-top: 3.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 1.2rem;
+
+        @media only screen and (max-width: 23em) {
+            width: 100%;
+        }
+    }
+
+    &__nav-btn,
+    &__nav-btn:link,
+    &__nav-btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        background-color: $color-gray;
+        padding: 1rem 3rem;
+    }
+
+    &__nav-txt {
+        color: $color-gray-dark;
+        cursor: pointer;
+    }
+
+    @include go-to-top;
+}
