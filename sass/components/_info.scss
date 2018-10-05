@@ -1,0 +1,81 @@
+.info {
+    width: 36rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    /* Info section */
+
+    &__info {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 1.2rem;
+    }
+
+    &__contacts {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & > * {
+            margin: 4px 0;
+        }
+    }
+
+    &__single-contact {
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        letter-spacing: 1.5px;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &__social-icons {
+        margin-top: 2rem;
+        
+        .info__icon {
+            margin: 0 .6rem;
+            cursor: pointer;
+        }
+    }
+
+    &__logo {
+        width: 10rem;
+    }
+
+
+    /* Twtitter widget */
+
+    &__twitter {
+        text-align: center;
+    }
+
+    &__twitter-icon {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    &__twitter-text {
+        margin-top: 1.2rem;
+
+        font-size: 1.8rem;
+        font-style: italic;
+        color: $color-accent-2;
+        font-weight: 300;
+    }
+
+    &__twitter-mention {
+        color: $color-gray;
+        cursor: pointer;
+    }
+}

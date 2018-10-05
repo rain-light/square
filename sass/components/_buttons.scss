@@ -1,0 +1,47 @@
+.go-to-top {
+    background-color: $color-gray;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: all .1s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        fill: #fff;
+    }
+
+    &:hover {
+        background-color: lighten($color-gray, $amount: 10)
+    }
+}
+
+.button,
+.button:link,
+.button:visited {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button--small,
+.button--small:link,
+.button--small:visited {
+    padding: .8rem 7rem;
+    font-size: 1.2rem;
+}
+
+.button--gold,
+.button--gold:link,
+.button--gold:visited {
+    background-color: $color-accent-2;
+    color: #fff;
+
+    &:hover {
+        background-color: darken($color-accent-2, $amount: 5);
+    }
+}

@@ -1,0 +1,91 @@
+.comments {
+
+    &__title {
+        font-size: 1.8rem;
+        color: $color-gray-dark-2;
+    }
+
+    &__comment {
+        margin-top: 2rem;
+
+        &--answer {
+            width: 95%;
+            margin-left: 5%;
+            .comments__comment-main {
+                background-color: $color-gray-lightest;
+            }
+        }
+    }
+
+    &__comment-top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        color: $color-gray-dark-2;
+    }
+
+    &__comment-name {
+        margin-right: 3.5rem;
+    }
+
+    &__comment-date {
+        margin-right: auto;
+        color: $color-gray-light-2;
+        font-size: 1.2rem;
+    }
+
+    &__comment-reply {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        svg {
+            margin-right: 1rem;
+        }
+    }
+
+    &__comment-main {
+        background-color: $color-gray-2;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__comment-img {
+        width: 7rem;
+        height: 7rem;
+        background-color: $color-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 29.125em) {
+            margin-left: calc((-.086085462237659 * 100vw) + 39.029846892551px);
+        }
+    }
+
+    &__comment-content {
+        flex: 1;
+        margin: 1.5rem 2.5rem;
+        font-size: 1.4rem;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: $color-gray-dark-2;
+    }
+
+    &__user-icon {
+        width: 2rem;
+        height: 2rem;
+        fill: #fff;
+    }
+
+    @include respond(phone) {
+        margin: 0 1.5rem;
+    }
+}

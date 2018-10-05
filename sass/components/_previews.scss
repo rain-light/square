@@ -1,0 +1,85 @@
+.previews__title,
+.categories__heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    width: 50%;
+    padding-left: 1rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid $color-accent-2;
+}
+
+.previews {
+    width: 35.4rem;
+
+    &__grid {
+        margin-top: 1.8rem;
+
+        display: grid;
+        grid-template-columns: 7rem 26rem;
+        grid-column-gap: 3rem;
+        grid-template-rows: repeat(3, 7rem);
+        grid-row-gap: 5.5rem;
+    }
+
+    &__article {
+        position: relative;
+        font-size: 1.2rem;
+        letter-spacing: 1.2px;
+    }
+
+    &__article-title {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    &__date {
+        color: $color-gray-light;
+        font-weight: 300;
+    }
+
+    &__excerpt {
+        
+    }
+
+    &__read-more {
+        display: block;
+        position: absolute;
+        right: 4px;
+        bottom: -2px;
+
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-accent-2;
+
+        @include respond(tab-port) {
+            right: auto;
+            left: 0;
+            bottom: -1.5rem;
+        }
+    }
+}
+
+/* Categories of Single Blog Post Page are handled here too. */
+
+.categories {
+    justify-self: center;
+    width: 35rem;
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__list {
+        margin-top: 3rem;
+        margin-left: 5rem;
+        list-style: square;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-gray;
+        font-weight: 300;
+    }
+}

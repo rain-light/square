@@ -1,0 +1,202 @@
+.portfolioview {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/freeman.jpg);
+    background-size: 120%;
+    background-position: 30% top;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    /* Flexbox Settings and Generals */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__close-btn {
+        align-self: flex-end;
+        
+        &--active {
+            background-color: #fff;
+            width: 6.5rem;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__close-line,
+    &__close-line::after {
+        width: 2rem;
+        height: 5px;
+        background-color: $color-accent-2;
+        border-radius: 2px;
+        transform: rotate(45deg);
+    }
+
+    &__close-line::after {
+        display: block;
+        content: "";
+        transform: rotate(90deg);
+    }
+
+    &__infobox {
+        align-self: flex-start;
+        background-color: #fff;
+        width: 26rem;
+        height: 26rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; //DA VALUTARE E/O CAMBIARE
+        transition: transform .3s;
+        transform: translate(-20rem, 20rem);
+
+        & > *:not(.portfolioview__label) {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s .3s, visibility .3s .3s;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            transform: translate(calc((-.98724576752642 * 100vw) + 41.388137711624px), 20rem); //See below
+            /* Maybe an exaggeration, but I like challenges like this (took more than 3 hours to realize
+            how to do it) and attention to detail :P */
+        }
+    }
+
+    /* CENTRAL SECTION STYLING */
+
+    &__infobox-central {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__infobox-nav-icons {
+        display: flex;
+    }
+
+    &__infobox-nav-icon-single-box {
+        background-color: $color-gray;
+        width: 3.5rem;
+        height: 3.5rem;
+        cursor: pointer;
+        transition: background-color .2s;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: lighten($color-gray, $amount: 8);
+        }
+    }
+
+    &__nav-icon {
+        fill: #ffffff;
+        width: 1.6rem;
+        height: 1.6rem;
+        transform: skewX(-10deg);
+    }
+
+    &__current-number {
+        margin-top: .5rem;
+        font-style: italic;
+    }
+
+    /* Central typography and stuff */
+
+    &__infobox-description-box {
+        margin-left: 1rem;
+    }
+
+    &__title {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.8rem;
+    }
+
+    &__caption {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.5rem;
+    }
+
+    &__infobox-description-text {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        font-weight: 300;
+    }
+
+    /* BOTTOM SECTION STYLING */
+
+    &__infobox-bottom {
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__checkbox {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        fill: $color-gray;
+    }
+
+    &__label {
+        align-self: flex-end;
+        margin-top: .5rem;
+        margin-right: 1.5rem;
+        cursor: pointer;
+        position: relative;
+        top: 1rem;
+        right: .5rem;
+    }
+
+    &__icon-minimize {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+
+    /* CHECKBOX HACK SECTION */
+
+    &__checkbox:checked + &__infobox {
+        transform: translate(0, 0);
+    }
+
+    &__checkbox:checked + &__infobox &__icon-maximize {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+
+    &__checkbox:checked + &__infobox &__icon-minimize {
+        visibility: visible;
+        opacity: 1;
+        position: initial;
+    }
+
+    &__checkbox:checked + &__infobox &__icon {
+        fill: $color-accent-2;
+    }
+
+    &__checkbox:checked + &__infobox > *:not(.portfolioview__label) {
+        visibility: visible;
+        opacity: 1;
+    }
+}

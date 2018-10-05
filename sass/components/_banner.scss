@@ -1,0 +1,57 @@
+.banner {
+    background-color: #000;
+    width: 36rem;
+    height: 36rem;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__img {
+        width: 100%;
+        height: 40%;
+        background-size: cover;
+        background-image: url(/img/workshop.jpg);
+    }
+
+    &__central {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 1.8rem;
+    }
+
+    &__date {
+        margin: 1rem 0;
+    }
+
+    &__time {
+        font-weight: 300;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    &__logo {
+        width: 7rem;
+        height: 7rem;
+        background-color: $color-accent-2;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+}
