@@ -306,12 +306,8 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-    }
-    
-    &__mobile-item {
-        margin: 1rem 0;
     }
 
     &__mobile-link,
@@ -319,7 +315,7 @@
     &__mobile-link:visited {
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 3.5rem;
+        font-size: 5vh;
         color: $color-gray;
 
         @media only screen and (max-height: 25em) {
@@ -328,13 +324,16 @@
     }
 
     &__mobile-social-icons {
+        width: 100%;
         margin-bottom: 2rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .navbar__icon {
             margin: 0 .3rem;
+            width: 5vh;
+            height: 5vh;
         }
 
         @media only screen and (max-height: 25em) {
