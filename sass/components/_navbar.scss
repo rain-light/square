@@ -230,6 +230,11 @@
         @include respond(phone) {
             margin: 0;
         }
+
+        @media only screen and (max-height: 25em) {
+            width: 5vh;
+            height: 5vh;
+        }
     }
 
     /* NAVBAR MOBILE STYLING (It will be triggered by the checkbox hack too */
@@ -316,15 +321,25 @@
         text-decoration: none;
         font-size: 3.5rem;
         color: $color-gray;
+
+        @media only screen and (max-height: 25em) {
+            font-size: 5vh;
+        }
     }
 
     &__mobile-social-icons {
         margin-bottom: 2rem;
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         .navbar__icon {
             margin: 0 .3rem;
+        }
+
+        @media only screen and (max-height: 25em) {
+            margin-bottom: 1rem;
+            width: 80%;
         }
     }
 }
