@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SQUARE | Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/logo-black.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <input type="checkbox" class="navbar__checkbox" id="navcheck">
+            <div class="navbar__menu">
+                <label for="navcheck" class="navbar__label">
+                    <div class="navbar__hamburger">
+                        <span class="navbar__hamburger-line"></span>
+                    </div>
+                </label>
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="/portfolio.html" class="navbar__link">Portfolio</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/home.html" class="navbar__link">Clients</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/blog.html" class="navbar__link">News</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/about.html" class="navbar__link">About Me</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/contact.html" class="navbar__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="/img/logo.png" alt="Square Logo" class="navbar__logo">
+            <div class="navbar__social-icons">
+                <svg class="navbar__icon">
+                    <use xlink:href="/img/sprite.svg#icon-facebook"></use>
+                </svg>
+                <svg class="navbar__icon">
+                    <use xlink:href="/img/sprite.svg#icon-twitter"></use>
+                </svg>
+                <svg class="navbar__icon">
+                    <use xlink:href="/img/sprite.svg#icon-instagram"></use>
+                </svg>
+                <svg class="navbar__icon">
+                    <use xlink:href="/img/sprite.svg#icon-flickr"></use>
+                </svg>
+                <svg class="navbar__icon">
+                    <use xlink:href="/img/sprite.svg#icon-google-plus"></use>
+                </svg>
+                <svg class="navbar__icon">
+                    <use xlink:href="/img/sprite.svg#icon-envelope"></use>
+                </svg>
+            </div>
+            <!-- MOBILE NAVIGATION START -->
+
+            <div class="navbar__mobile-dark-overlay"></div>
+            <div class="navbar__mobile">
+                <label for="navcheck" class="navbar__mobile-label">
+                    <span class="navbar__mobile-line"></span>
+                </label>
+                <img src="/img/logo.png" alt="Square Logo" class="navbar__mobile-logo">
+                <ul class="navbar__mobile-list">
+                    <li class="navbar__mobile-item">
+                        <a href="/portfolio.html" class="navbar__mobile-link">Portfolio</a>
+                    </li>
+                    <li class="navbar__mobile-item">
+                        <a href="/blogpost.html" class="navbar__mobile-link">Clients</a>
+                    </li>
+                    <li class="navbar__mobile-item">
+                        <a href="/blog.html" class="navbar__mobile-link">News</a>
+                    </li>
+                    <li class="navbar__mobile-item">
+                        <a href="/about.html" class="navbar__mobile-link">About Me</a>
+                    </li>
+                    <li class="navbar__mobile-item">
+                        <a href="/contact.html" class="navbar__mobile-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="navbar__mobile-social-icons">
+                    <svg class="navbar__icon">
+                        <use xlink:href="/img/sprite.svg#icon-facebook"></use>
+                    </svg>
+                    <svg class="navbar__icon">
+                        <use xlink:href="/img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                    <svg class="navbar__icon">
+                        <use xlink:href="/img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                    <svg class="navbar__icon">
+                        <use xlink:href="/img/sprite.svg#icon-flickr"></use>
+                    </svg>
+                    <svg class="navbar__icon">
+                        <use xlink:href="/img/sprite.svg#icon-google-plus"></use>
+                    </svg>
+                    <svg class="navbar__icon">
+                        <use xlink:href="/img/sprite.svg#icon-envelope"></use>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- MOBILE NAVIGATION END -->
+        </div>
+    </nav>
+    <main class="container">
+        <div class="home__portfolioview">
+            <div class="portfolioview">
+                <div class="portfolioview__close-btn">
+                    <!-- Need this for Flexbox and component reusability -->
+                </div>
+                <input type="checkbox" class="portfolioview__checkbox" id="portviewcheck" checked>
+                <div class="portfolioview__infobox">
+                    <label for="portviewcheck" class="portfolioview__label">
+                        <svg class="portfolioview__icon portfolioview__icon-maximize">
+                            <use xlink:href="/img/sprite.svg#icon-maximize"></use>
+                        </svg>
+                        <svg class="portfolioview__icon portfolioview__icon-minimize">
+                            <use xlink:href="/img/sprite.svg#icon-minimize-2"></use>
+                        </svg>
+                    </label>
+                    <div class="portfolioview__infobox-central">
+                        <div class="portfolioview__infobox-description-box">
+                            <div class="portfolioview__infobox-description-title-box">
+                                <h4 class="portfolioview__title">Morgan Freeman</h4>
+                                <h6 class="portfolioview__caption">actor</h6>
+                            </div>
+                            <p class="portfolioview__infobox-description-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.
+                            </p>
+                        </div>
+                        <div class="portfolioview__right">
+                            <div class="portfolioview__infobox-nav-icons">
+                                <div class="portfolioview__infobox-nav-icon-single-box">
+                                    <svg class="portfolioview__nav-icon">
+                                        <use xlink:href="/img/sprite.svg#icon-angle-left"></use>
+                                    </svg>
+                                </div>
+                                <div class="portfolioview__infobox-nav-icon-single-box">
+                                    <svg class="portfolioview__nav-icon">
+                                        <use xlink:href="/img/sprite.svg#icon-angle-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span class="portfolioview__current-number">1 / 10</span>
+                        </div>
+                    </div>
+                    <div class="portfolioview__infobox-bottom">
+                        <svg class="portfolioview__icon">
+                            <use xlink:href="/img/sprite.svg#icon-heart"></use>
+                        </svg>
+                        <svg class="portfolioview__icon">
+                            <use xlink:href="/img/sprite.svg#icon-mail-forward"></use>
+                        </svg>
+                        <svg class="portfolioview__icon">
+                            <use xlink:href="/img/sprite.svg#icon-envelope"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home__content">
+            <div class="grid-3-cols">
+                <div class="banner">
+                    <div class="banner__img"></div>
+                    <div class="banner__central">
+                        <span class="banner__title">Fashion Workshop</span>
+                        <span class="banner__date">Nov 21-23</span>
+                        <span class="banner__time">9:00AM - 4:00PM</span>
+                    </div>
+                    <div class="banner__logo">
+                        <span class="banner__logo-text">RSVP</span>
+                    </div>
+                </div>
+                <div class="previews">
+                    <h3 class="previews__title">News</h3>
+                    <div class="previews__grid">
+                        <img src="/img/news-1.jpg" alt="New Gallery Set" class="previews__thumbnail">
+                        <div class="previews__article">
+                            <h4 class="previews__article-title">New Gallery Set</h4>
+                            <span class="previews__date">09.12.2018</span>
+                            <p class="previews__excerpt">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis eget.
+                            </p>
+                            <a href="#" class="previews__read-more">Read More</a>
+                        </div>
+                        <img src="/img/news-2.jpg" alt="Wedding Workshop" class="previews__thumbnail">
+                        <div class="previews__article">
+                            <h4 class="previews__article-title">Wedding Workshop</h4>
+                            <span class="previews__date">09.12.2018</span>
+                            <p class="previews__excerpt">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis
+                                eget.
+                            </p>
+                            <a href="#" class="previews__read-more">Read More</a>
+                        </div>
+                        <img src="/img/news-3.jpg" alt="Personal Project" class="previews__thumbnail">
+                        <div class="previews__article">
+                            <h4 class="previews__article-title">Personal Project</h4>
+                            <span class="previews__date">09.12.2018</span>
+                            <p class="previews__excerpt">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla mi orci, ac venenatis ante venenatis
+                                eget.
+                            </p>
+                            <a href="#" class="previews__read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info__info">
+                        <img src="/img/logo-black.png" alt="Square Logo" class="info__logo">
+                        <div class="info__contacts">
+                            <span class="info__single-contact">
+                                <svg class="info__icon">
+                                    <use xlink:href="/img/sprite.svg#icon-phone-square"></use>
+                                </svg>
+                                + 00 123 456 7890
+                            </span>
+                            <span class="info__single-contact">
+                                <svg class="info__icon">
+                                    <use xlink:href="/img/sprite.svg#icon-envelope"></use>
+                                </svg>
+                                info@square.com
+                            </span>
+                            <div class="info__social-icons">
+                                <svg class="info__icon">
+                                    <use xlink:href="/img/sprite.svg#icon-facebook"></use>
+                                </svg>
+                                <svg class="info__icon">
+                                    <use xlink:href="/img/sprite.svg#icon-twitter"></use>
+                                </svg>
+                                <svg class="info__icon">
+                                    <use xlink:href="/img/sprite.svg#icon-instagram"></use>
+                                </svg>
+                                <svg class="info__icon">
+                                    <use xlink:href="/img/sprite.svg#icon-flickr"></use>
+                                </svg>
+                                <svg class="info__icon">
+                                    <use xlink:href="/img/sprite.svg#icon-google-plus"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info__twitter">
+                        <svg class="info__twitter-icon">
+                            <use xlink:href="/img/sprite.svg#icon-twitter"></use>
+                        </svg>
+                        <p class="info__twitter-text">
+                            Unerdwear cookie liquorice. Cake donut cupcake lollipop soufflé candy. Chocolate oat cake <span class="info__twitter-mention">@cheesecake</span> tootsie roll.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="partners">
+            <img src="/img/phaseone-logo.png" alt="Phase One" class="partners__image">
+            <img src="/img/manfrotto-logo.png" alt="Phase One" class="partners__image">
+            <img src="/img/hasselblad.png" alt="Phase One" class="partners__image">
+            <img src="/img/broncolor-logo.png" alt="Phase One" class="partners__image">
+        </div>
+        <div class="footer__content">
+            <span class="footer__credits">
+                Created by 2ndself.com, with
+                <svg class="footer__heart">
+                    <use xlink:href="/img/sprite.svg#icon-heart"></use>
+                </svg>
+                exclusive for theuncreativelab.com
+            </span>
+            <span class="footer__copyright">
+                © 2014 Square. All Rights Reserved.
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
