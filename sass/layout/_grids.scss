@@ -1,0 +1,21 @@
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-gap: 3rem;
+    justify-items: center;
+}
+
+.blog__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+    grid-column-gap: 3rem;
+    justify-items: center;
+}
+
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34.2rem, 1fr)); //PROVVISORIO
+    grid-column-gap: 3%;
+    grid-row-gap: 8rem;
+    justify-items: center;
+}
